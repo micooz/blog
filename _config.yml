@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Micooz's Personal Site
+title: Micooz
 subtitle: Make something different!
-description: Micooz's blog archives
+description: FullStack JavaScript Engineer
 author: Micooz Lee
-language:
+language: en
 timezone:
 
 # URL
@@ -74,7 +74,17 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 theme: next
 
+# Search
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
+
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repo: git@github.com:micooz/micooz.github.io.git
+  branch: master
+  message:
