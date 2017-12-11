@@ -6,20 +6,18 @@ branches:
   only:
     - master
 
-install:
-  - yarn
-
-before_script:
-  - git submodule update --init --recursive
-
-script:
-  - hexo clean
-  - hexo generate
-
-after_script:
-  - hexo deploy
-
 cache:
   yarn: true
   directories:
     - node_modules
+
+before_script:
+  - git config --global user.name "micooz"
+  - git config --global user.email "micooz@hotmail.com"
+  - git submodule update --init --recursive
+  - sed -i "s/git@github.com:/https:\/\/${GITHUB_TOKEN}@github.com\//" _config.yml
+
+script:
+  - hexo clean
+  - hexo generate
+  - hexo deploy
