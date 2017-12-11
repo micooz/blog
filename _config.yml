@@ -88,3 +88,7 @@ deploy:
   repo: git@github.com:micooz/micooz.github.io.git
   branch: master
   message:
+
+# Optimization
+## https://github.com/chenzhutian/hexo-all-minifier
+all_minifier: true
